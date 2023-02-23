@@ -1,3 +1,4 @@
+
 var currentOrder = {
 	hotdog: 0,
 	frenchfries: 0,
@@ -109,28 +110,28 @@ function viewCart() {
 	cartStr = "Your order: <br/>";
 	
 	if (currentOrder['hotdog'] != 0) {
-	cartStr += "<span class='cartHeader'>Hot Dogs</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['hotdog'] + "</span><br/><span class='cartDetails'>Total Hot Dog Cost $" + hotdogCost + "</span>";
+	cartStr += "<span class='cartHeader'>Hot Dogs</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['hotdog'] + "</span><br/><span class='cartDetails'>Total Hot Dog Cost $" + hotdogCost.toFixed(2) + "</span>";
 	} 
 	
 	if (currentOrder['frenchfries'] != 0) {
-	cartStr += "<br/><span class='cartHeader'>French Fries</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['frenchfries'] + "</span><br/><span class='cartDetails'>Total French Fry Cost: $" + frenchfryCost + "</span>";
+	cartStr += "<br/><span class='cartHeader'>French Fries</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['frenchfries'] + "</span><br/><span class='cartDetails'>Total French Fry Cost: $" + frenchfryCost.toFixed(2) + "</span>";
 	} 
 	
 	if (currentOrder['soda'] != 0) {
-	cartStr += "<br/><span class='cartHeader'>Soda</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['soda'] + "</span><br/><span class='cartDetails'>Total Soda Cost: $" + sodaCost + "</span>";
+	cartStr += "<br/><span class='cartHeader'>Soda</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['soda'] + "</span><br/><span class='cartDetails'>Total Soda Cost: $" + sodaCost.toFixed(2) + "</span>";
 	} 
 	
 	if (currentOrder['sauerkraut'] != 0) {
-	cartStr += "<br/><span class='cartHeader'>Sauerkraut</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['sauerkraut'] + "</span><br/><span class='cartDetails'>Total Sauerkraut Cost $" + sauerCost + "</span>";
+	cartStr += "<br/><span class='cartHeader'>Sauerkraut</span><br/><span class='cartDetails'>Quanity Ordered: " + currentOrder['sauerkraut'] + "</span><br/><span class='cartDetails'>Total Sauerkraut Cost $" + sauerCost.toFixed(2) + "</span>";
 	} 
 	
-	cartStr += "<br/><br/><span class='cartHeader'>Subtotal: $" + subtotal;
+	cartStr += "<br/><br/><span class='cartHeader'>Subtotal: $" + subtotal.toFixed(2);
 	
 	if (discount.isInteger = true) {
-		cartStr += "</span><br/><br/><span class='cartHeader'>Discount: $" + discount;
+		cartStr += "</span><br/><br/><span class='cartHeader'>Discount: $" + discount.toFixed(2);
 	}
 	
-	cartStr += "</span><br/><br/><span class='cartHeader'>Tax: $" + tax + "<br/><br/><span class='cartTotal'>Total: $" + total;
+	cartStr += "</span><br/><br/><span class='cartHeader'>Tax: $" + tax.toFixed(2) + "<br/><br/><span class='cartTotal'>Total: $" + total.toFixed(2);
 	
 	// make cart visible
 	myCart.style.visibility = "visible";
