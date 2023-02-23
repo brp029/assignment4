@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joe's Hot Dogs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Joe's Hot Dogs</h1>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-2">
+			<button class="mybutton" onclick="addItem()">Add Item</button>
+		</div>
+		<div class="col-2">
+			<button class="mybutton" onclick="showCart()">View Cart</button>
+		</div>
+		<div class="col-2">
+			<button class="mybutton" onclick="checkOut()">Check Out</button>
+		</div>
+		<div class="col-3"></div>
+	</div>
+	<div class="row">
+    	<div class="col-3">
+		</div>
+        <div class="col-6" id="menuPrices">
+			<ol>
+				<li>Hot Dog - $4.00</li>
+				<li>French Fries - $3.50</li>
+				<li>Soda - $1.50</li>
+				<li>Saurekraut - $1.00</li>
+			</ol>
+		</div>
+		<div class="col-3">
+        </div>
+    </div>
+	<div class="row">
+		<div class="col-3">
+		</div>
+        <div class="col-6" id="myCart">
+		</div>
+		<div class="col-3">
+        </div>
+	</div>
+  </div>
+  <!--Add Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <!--Add D3-->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!--Add my JS file-->
+  <script type="text/javascript" src="js/main_presentation.js">
+</body>
+</html>
