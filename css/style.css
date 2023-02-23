@@ -24,7 +24,6 @@ h2 {
 h3 {
   font-size: 1.2em;
   color: black;
-  text-align: center;
 }
 
 p {
@@ -47,4 +46,20 @@ a {
 	visibility: hidden;
 	border: medium solid black;
 	background-color: grey;
+}
+
+.cartHeader {
+  margin-top: .5em;
+  margin-bottom: 0em;
+  font-size: 1.2em;
+  color: black;
+}
+
+.cartDetails {
+	margin-left: 10px;
+	font-size: .8em;
+}
+
+.cartTotal {
+	font-size: 1.2em;
 }
