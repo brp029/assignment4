@@ -1,4 +1,3 @@
-
 var currentOrder = {
 	hotdog: 0,
 	frenchfries: 0,
@@ -84,6 +83,7 @@ function viewCart() {
 		subtotal = subtotal - discount;
 	} else {
 		discount = null;
+		console.log("discount = no")
 	}
 	console.log("Discount: $"+ discount);
 	
@@ -97,7 +97,7 @@ function viewCart() {
 	subtotal = parseInt(subtotal);
 	discount = parseInt(discount);
 	tax = parseInt(tax);
-	if (discount.isInteger == true){
+	if (discount.isInteger = true){
 		console.log("discount = yes");
 		total = subtotal - discount + tax;
 	} else {
@@ -126,7 +126,7 @@ function viewCart() {
 	
 	cartStr += "<br/><br/><span class='cartHeader'>Subtotal: $" + subtotal;
 	
-	if (discount.isInteger == true) {
+	if (discount.isInteger = true) {
 		cartStr += "</span><br/><br/><span class='cartHeader'>Discount: $" + discount;
 	}
 	
