@@ -98,7 +98,7 @@ function viewCart() {
 	subtotal = parseInt(subtotal);
 	discount = parseInt(discount);
 	tax = parseInt(tax);
-	if (discount.isInteger = true){
+	if (discount.isInteger == true){
 		console.log("discount = yes");
 		total = subtotal - discount + tax;
 	} else {
@@ -127,7 +127,7 @@ function viewCart() {
 	
 	cartStr += "<br/><br/><span class='cartHeader'>Subtotal: $" + subtotal.toFixed(2);
 	
-	if (discount.isInteger = true) {
+	if (discount.isInteger == true) {
 		cartStr += "</span><br/><br/><span class='cartHeader'>Discount: $" + discount.toFixed(2);
 	}
 	
