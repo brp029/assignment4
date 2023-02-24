@@ -77,30 +77,37 @@ function viewCart() {
 	subtotal = hotdogCost + frenchfryCost + sodaCost + sauerCost;
 	console.log("Subtotal: $"+ subtotal);
 	
+	discount = 0; // set default discount value
+	
 	// if order total is > $20, give 10% discount
 	if (subtotal > 20) {
 		discount = subtotal/10;
 		discount = parseInt(discount.toFixed(2));
-		subtotal = subtotal - discount;
-	} else {
-		discount = null;
-		console.log("discount = no")
-	}
+		let updatedSubtotal = subtotal - discount;
+	} 
+	
 	console.log("Discount: $"+ discount);
 	
 	// add 6.25% tax
-	tax = subtotal * .0625;
-	console.log("Tax" + tax);
-	tax = tax.toFixed(2);
-	
+	if (subtotal > 20) {
+	  tax = updatedSubtotal * .0625;
+	  console.log("Tax" + tax);
+	  tax = tax.toFixed(2);
+	}
+	else {
+	  tax = subtotal * .0625;
+	  console.log("Tax" + tax);
+	  tax = tax.toFixed(2);
+	}
 	
 	// calculate total
 	subtotal = parseInt(subtotal);
+	updatedSubtotal = parseInt(updatedSubtotal);
 	discount = parseInt(discount);
 	tax = parseInt(tax);
-	if (discount.isInteger == true){
+	if (subtotal > 20){
 		console.log("discount = yes");
-		total = subtotal - discount + tax;
+		total = updatedSubtotal + tax;
 	} else {
 		console.log("discount = no")
 		total = subtotal + tax;
@@ -127,7 +134,7 @@ function viewCart() {
 	
 	cartStr += "<br/><br/><span class='cartHeader'>Subtotal: $" + subtotal.toFixed(2);
 	
-	if (discount.isInteger == true) {
+	if (subtotal > 20) {
 		cartStr += "</span><br/><br/><span class='cartHeader'>Discount: $" + discount.toFixed(2);
 	}
 	
