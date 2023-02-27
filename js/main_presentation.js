@@ -79,11 +79,13 @@ function viewCart() {
 	
 	discount = 0; // set default discount value
 	
+	let updatedSubtotal;
+	
 	// if order total is > $20, give 10% discount
 	if (subtotal > 20) {
 		discount = subtotal/10;
 		discount = parseInt(discount.toFixed(2));
-		let updatedSubtotal = subtotal - discount;
+		updatedSubtotal = subtotal - discount;
 	} 
 	
 	console.log("Discount: $"+ discount);
